@@ -7,11 +7,11 @@ import (
 
 func Sqrt(x float64) (float64, int) {
   z := float64(1)
-  bz := float64(0)
+  pz := float64(0)
   i := 0
 
-  for ; math.Abs(bz-z) > 0.0001; i++ {
-    bz = z
+  for ; math.Abs(pz-z) > 0.0001; i++ {
+    pz = z
     z = z - ((z*z - x) / 2*z)
   }
 
